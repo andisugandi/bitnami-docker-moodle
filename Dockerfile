@@ -5,7 +5,7 @@ RUN echo "error_log = /dev/stderr" > /opt/bitnami/php/etc/conf.d/error_log.ini
 
 # Prepare /var/local/cache
 RUN mkdir -vp /var/local/cache && \
-    chown -Rc bitnami:daemon /var/local/cache && \
+    chown -Rc root:daemon /var/local/cache && \
     chmod ug+rwx /var/local/cache
 
 # Enable opcache
