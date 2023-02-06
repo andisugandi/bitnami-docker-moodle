@@ -1,4 +1,4 @@
-FROM bitnami/moodle:latest
+FROM bitnami/moodle:3-debian-11
 
 # Configure PHP error_log to stderr, as in: https://docs.docker.com/config/containers/logging/
 RUN echo "error_log = /dev/stderr" > /opt/bitnami/php/etc/conf.d/error_log.ini
