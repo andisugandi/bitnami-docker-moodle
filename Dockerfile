@@ -25,7 +25,7 @@ RUN echo "extension=igbinary.so" > /opt/bitnami/php/etc/conf.d/igbinary.ini
 
 # Install PECL redis
 RUN pecl channel-update pecl.php.net
-RUN yes | pecl install redis
+RUN yes | pecl install redis || true
 RUN echo "extension=redis.so" > /opt/bitnami/php/etc/conf.d/redis.ini
 
 # Install PECL mongodb
