@@ -15,7 +15,7 @@ RUN echo "opcache.enable = 1" > /opt/bitnami/php/etc/conf.d/opcache.ini
 
 # Prepare PECL build tools
 RUN apt-get update && \
-    apt-get install -y gcc make autoconf libc-dev libssl-dev pkg-config
+    apt-get install -y gcc make autoconf libc-dev libssl-dev pkg-config libzstd-dev
 
 # Install PECL igbinary
 # igbinary serializer & lzf compression is recommended: https://pdfs.semanticscholar.org/8395/e04cf62d03597e2a2e6a605ebc52bfa6ca7d.pdf 
